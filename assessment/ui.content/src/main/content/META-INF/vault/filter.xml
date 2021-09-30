@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/assessmemt" mode="merge"/>
+    <filter root="/content/assessmemt" mode="merge"/>
+    <filter root="/content/dam/assessmemt" mode="merge"/>
+    <filter root="/content/experience-fragments/assessmemt" mode="merge"/>
+</workspaceFilter>

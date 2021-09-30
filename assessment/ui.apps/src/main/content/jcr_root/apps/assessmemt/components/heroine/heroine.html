@@ -1,0 +1,14 @@
+<div>
+    <div class="HeroImage" style="background-image: url(${(properties.fileReference) @context='styleString'});background-repeat: no-repeat;background-size: 100% 100%;"><br><br>
+        <div class=" container cq-dd-image">
+            <div class="HeroImage-wrapper " style="color:white; position:relative; left: 10%;">
+                <h1 class="HeroImage-title">${properties.jcr:title}</h1>
+                <h6 class="HeroImage-alt" style="color: yellow;">${properties.alt}</h6><br>
+                <p data-sly-test="${properties.buttonLabel && properties.buttonLinkTo} ">
+                    <a onMouseOver="this.style.color='yellow'" onMouseOut="this.style.color='white'" style="font-size: 18px;background-color: black;border-radius: 75pt;padding: 14px 24px;color:white" class="btn btn-primary btn-action " href="${properties.buttonLinkTo @ extension='html' } "
+                        role="button ">${properties.buttonLabel}</a>
+                </p><br><br>
+            </div>
+        </div>
+    </div>
+</div>
