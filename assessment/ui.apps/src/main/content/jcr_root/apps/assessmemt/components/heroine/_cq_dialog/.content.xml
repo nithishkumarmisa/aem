@@ -74,7 +74,7 @@
                         fieldLabel="Link to"
                         name="./buttonLinkTo"
                         rootPath="/content"
-                        suffix=".html"/>
+                        suffix=".html, .pdf"/>
                 </items>
             </column>
         </items>

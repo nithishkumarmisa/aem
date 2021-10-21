@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+
+<body><br>
+
+
+    <h1>User Data</h1><br>
+    <div>
+        <form method="post" id="myform">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+
+
+            <label for="dscrip">Description:</label><br>
+            <input type="text" id="dscrip" name="descrip"><br><br>
+
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h1 id="id2"></h1>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            console.log("ajax call to servlet");
+
+
+            $("#myform").on('submit', function(event) {
+                event.preventDefault();
+
+
+                var f = $(this).serialize();
+
+
+                console.log(f);
+
+
+                $.ajax({
+
+
+                    url: "/bin/services/helloworld.helloworld.json",
+                    method: "post",
+                    data: f,
+                    success: function(data) {
+                        $("#id2").html(data);
+                        console.log(data);
+                        console.log("success");
+                    },
+
+
+                    error: function(data) {
+                        $("#id2").html(data);
+                        console.log(data);
+                        console.log("failure");
+                    }
+
+
+                })
+
+
+            })
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>
